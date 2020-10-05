@@ -35,14 +35,20 @@ You will need to normalize the counts from Task A; all nodes will be colored, an
 
 ## :star: **Task C:** Implement a Personalized PageRank Simulator
 
-You will now implement a random walk with restarts. Given a list of COVID nodes (e.g. `lab_utils.COVID_NODES`) and a probability `q`:
+You will now implement a random walk with restarts. Given a list of COVID nodes and a probability `q`:
 
 1. Randomly select a COVID node to begin the random walk.
 2. For 100,000 steps, **with probability `q`** move to a neighbor uniformly at random, and **with probability `1-q`** teleport to a COVID node uniformly at random.
 
+the `lab_utils.py` file contains a list of COVID nodes that you can use:
+
+```
+print(lab_utils.COVID_NODES)
+```
+
 Post graphs with `q=0.2` and `q=0.8`.
 
-:question: How do you decide which movement a walker should do?  There's another useful function in the [`random` module documentation](https://docs.python.org/3/library/random.html).
+:question: How do you decide which movement a walker should do?  There's another useful function in the [`random` Python module documentation](https://docs.python.org/3/library/random.html).
 
 ## Submitting
 
