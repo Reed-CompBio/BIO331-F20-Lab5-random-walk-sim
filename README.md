@@ -2,9 +2,9 @@
 
 In this lab, you will run different random walk simulations on the undirected, unweighted [SARS-CoV-2 - host proximity interactome](https://www.biorxiv.org/content/10.1101/2020.09.03.282103v1) by Payman Samavarchi-Tehrani and colleagues. This interactome is hot off the press, it was posted as a preprint earlier in September. For more information, take a look at their [project website](https://covid19interactome.org/).  
 
-:arrow_right: Random walks can be applied to directed or undirected networks, which may be weighted or unweighted.
+:arrow_right: Random walks can be applied to directed or undirected networks, which may be weighted or unweighted.  Here, we will simulate random walks on undirected, unweighted networks.
 
-The `proximity-network.txt` file contains the top 25 proximity interactions for each of the 29 viral proteins.  This is an undirected, unweighted network, and the `lab_utils.get_graph()` function returns a `nodes` set, an `edges` list, and an `adj_list` adjacency list for the graph.  First, add your email and password in the `lab5.py` file and run it.  This code automatically visualizes a GraphSpace graph by calling functions from `lab_utils.py`.  
+The `proximity-network.txt` file contains the top 25 proximity interactions for each of the 29 viral proteins (from their [Supplementary Table 4](https://www.biorxiv.org/content/10.1101/2020.09.03.282103v1.supplementary-material)).  This is an undirected, unweighted network, and the `lab_utils.get_graph()` function returns a `nodes` set, an `edges` list, and an `adj_list` adjacency list for the graph.  First, add your email and password in the `lab5.py` file and run it.  This code automatically visualizes a GraphSpace graph by calling functions from `lab_utils.py`.  
 
 ![original](figs/orig.png)
 
@@ -29,7 +29,7 @@ Build a `node_colors` dictionary that contains (node,HTML color code) key-value 
 lab_utils.viz_graph(graphspace, nodes, edges, 'Random Walk',node_colors)
 ```
 
-The virus nodes will remain red, and the color should scale with node degree.
+You will need to normalize the counts from Task A; all nodes will be colored, and the virus nodes will be diamonds with a red outline.
 
 :arrow_right: If the colors are not parsed correctly, the human nodes will default to white.
 
@@ -46,4 +46,4 @@ Post graphs with `q=0.2` and `q=0.8`.
 
 ## Submitting
 
-:star2: **You're Done with Tasks A-C!**  No code handin is required. Instead, you will share your Personalized PageRank networks (and any saved layouts) with the `BIO331F20` Group.  
+:star2: **You're Done with Tasks A-C!**  You should be able to explain why the coloring schemes are different between the random walks (and the random walk with restarts with different values of `q`).  No code handin is required. Instead, you will share your Personalized PageRank networks (and any saved layouts) with the `BIO331F20` Group.  
